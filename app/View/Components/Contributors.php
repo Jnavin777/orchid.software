@@ -14,11 +14,13 @@ class Contributors extends Component
      */
     public function render()
     {
-        $contributors = Http::withBasicAuth('token', config('services.github.token'))
-            ->get('https://api.github.com/repos/orchidsoftware/platform/contributors', [
-                'per_page' => 70,
-            ])
-            ->json();
+//        $contributors = Http::withBasicAuth('token', config('services.github.token'))
+//            ->get('https://api.github.com/repos/orchidsoftware/platform/contributors', [
+//                'per_page' => 70,
+//            ])
+//            ->json();
+
+        $contributors = [];
 
         return view('components.contributors', [
             'contributors' => $contributors,
